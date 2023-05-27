@@ -1,0 +1,41 @@
+version: '3.1'
+
+networks:
+    hadoop-net:
+        driver: bridge
+
+services:
+
+  namenode:
+    build: ./NameNode
+    image: namenode-image:latest
+    container_name: namenode
+    hostname: namenode
+    command: /opt/bd/start-daemons.sh
+    ports:
+        - "9870:9870"
+    networks:
+        - hadoop-net
+
+  resourcemanager:
+    build: ./ResourceManager
+    image: resourcemanager-image:latest
+    container_name: resourcemanager
+    hostname: resourcemanager
+    command: /opt/bd/start-daemons.sh
+    ports:
+        - "8088:8088"
+    networks:
+        - hadoop-net
+
+  dnnm:
+    build: ./DataNode-NodeManager
+    image: dnnm-image:latest
+    depends_on:
+        - namenode
+        - resourcemanager
+    command: /opt/bd/start-daemons.sh
+    networks:
+        - hadoop-net
+
+
