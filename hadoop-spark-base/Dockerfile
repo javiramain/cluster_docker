@@ -48,14 +48,15 @@ RUN echo "${LOG_TAG} Descargando Spark" && \
 
 # ENV VARS
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
+ENV PATH ${PATH}:{JAVA_HOME}bin
 
 #HADOOP AND YARN ENV VARS
 ENV HADOOP_HOME ${BASE_DIR}/hadoop/
 ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop/
+
 #ENV YARN_CONF_DIR ${HADOOP_HOME}/etc/hadoop/ --> ha sido reemplazado por hadoop_conf_dir
 ENV DATA_DIR /var/data/hadoop/hdfs
-ENV PATH ${PATH}:${HADOOP_HOME}/bin/:${HADOOP_HOME}/sbin/
-
+ENV PATH ${PATH}:${HADOOP_HOME}bin/:${HADOOP_HOME}sbin/
 
 #SPARK_ENV_VARS
 ENV SPARK_HOME=${BASE_DIR}/spark/

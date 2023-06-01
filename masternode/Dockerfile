@@ -1,4 +1,4 @@
-FROM hadoop-spark-image:latest
+FROM javira/hadoop-spark-image:latest
 
 # Dockerfile para el NameNode
 # Switch to root user
@@ -42,7 +42,7 @@ EXPOSE 8020 9820 9870 9871
 EXPOSE 8030 8031 8032 8033 8088 8090  
 
 # Expose Spark Ports
-EXPOSE 4040
+EXPOSE 4040 8080 
 
 WORKDIR ${HADOOP_HOME}
 

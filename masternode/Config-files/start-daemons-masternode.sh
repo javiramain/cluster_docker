@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HADOOP_HOME=/opt/bd/hadoop/
+#HADOOP_HOME=/opt/bd/hadoop/
 #Namenode
 HDFS_SERVICE=${HADOOP_HOME}/bin/hdfs
 NAMENODE_DAEMON=namenode
@@ -9,6 +9,8 @@ NAMENODE_DAEMON=namenode
 YARN_SERVICE=${HADOOP_HOME}/bin/yarn
 RESOURCE_MANAGER_DAEMON=resourcemanager
 
+#Spark
+SPARK_MASTER_SERVICE=${SPARK_HOME}/
 
 # Formateamos el NameNode en modo no interactivo
 # si existen datos, no se reformatea
@@ -40,10 +42,7 @@ done
 # Espera un poco mas antes de crear directorios
 sleep 5
 
-# Inicia directorios en HDFS
-#$HADOOP_HOME/bin/hdfs dfs -mkdir -p /user/hdadmin &&\
-#$HADOOP_HOME/bin/hdfs dfs -mkdir -p /tmp/hadoop-yarn/staging &&\
-#$HADOOP_HOME/bin/hdfs dfs -chmod -R 1777 /tmp
+
 
 # Mientras el demonio esté vivo, el contenedor sigue activo
 while true

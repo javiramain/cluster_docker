@@ -1,4 +1,4 @@
-FROM hadoop-spark-image:latest
+FROM javira/hadoop-spark-image:latest
 
 # Dockerfile para los DataNodes/NodeManagers
 
