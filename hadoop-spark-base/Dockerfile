@@ -38,7 +38,7 @@ RUN echo "$LOG_TAG Descargando Hadoop" && \
     ln -s hadoop-${HADOOP_VERSION} hadoop && \
     rm hadoop-${HADOOP_VERSION}.tar.gz
 
-# Descarga la version 3.3.4 de Spark en /opt/bd y crea enlace simbolico a "spark"
+# Descarga la version 3.4.0 de Spark en /opt/bd y crea enlace simbolico a "spark"
 RUN echo "${LOG_TAG} Descargando Spark" && \
 	curl -fLO "${SPARK_REPOSITORY}/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-without-hadoop.tgz"  && \
     tar xzvf spark-${SPARK_VERSION}-bin-without-hadoop.tgz && \

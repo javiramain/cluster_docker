@@ -32,6 +32,7 @@ services:
     image: workernode-image:latest
     container_name: workernode2
     hostname: workernode2
+    command: /opt/bd/start-daemons.sh
     networks:
        - hadoop-net
        
@@ -39,6 +40,7 @@ services:
      image: workernode-image:latest
      container_name: workernode3
      hostname: workernode3
+     command: /opt/bd/start-daemons.sh
      networks:
         - hadoop-net
         
