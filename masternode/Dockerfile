@@ -41,8 +41,8 @@ EXPOSE 8020 9820 9870 9871
 # Expose ResourceManager ports
 EXPOSE 8030 8031 8032 8033 8088 8090  
 
-# Expose Spark Ports
-EXPOSE 4040 8080 
+# Expose Spark Ports (from 4040 onward for each sparkContext)
+EXPOSE 4040-4045 8080 
 
 WORKDIR ${HADOOP_HOME}
 

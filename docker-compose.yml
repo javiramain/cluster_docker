@@ -13,11 +13,28 @@ services:
     hostname: masternode
     command: /opt/bd/start-daemons.sh
     ports:
+        - "8020:8020"
+        - "9820:9820"
         - "9870:9870"
+        - "9871:9871"
+        - "8030:8030"
+        - "8031:8031"
+        - "8032:8032"
+        - "8033:8033"
         - "8088:8088"
-        - "4040:4040"
+        - "8090:8090"
+        - "4040:4040" 
+        - "4041:4041"
+        - "4042:4042"
+        - "4043:4043"
+        - "4044:4044"
+        - "4045:4045"
+        - "8080:8080"
+    volumes:
+        - "/home/javi/Documentos/TFM/cluster/volumes/masternode/home:/home"
     networks:
         - hadoop-net
+
 
   workernode1:
     build: ./workernode
@@ -27,7 +44,18 @@ services:
     command: /opt/bd/start-daemons.sh
     networks:
         - hadoop-net
-
+    ports:
+       - "19864:9864"
+       - "19865:9865"
+       - "19866:9866"
+       - "19867:9867"
+       - "18040:8040"
+       - "18042:8042"
+       - "18044:8044"
+       - "18048:8048"
+    volumes:
+       - "/home/javi/Documentos/TFM/cluster/volumes/workernode1/home:/home"
+       
   workernode2:
     image: workernode-image:latest
     container_name: workernode2
@@ -35,6 +63,17 @@ services:
     command: /opt/bd/start-daemons.sh
     networks:
        - hadoop-net
+    ports:
+       - "29864:9864"
+       - "29865:9865"
+       - "29866:9866"
+       - "29867:9867"
+       - "28040:8040"
+       - "28042:8042"
+       - "28044:8044"
+       - "28048:8048"
+    volumes:
+       - "/home/javi/Documentos/TFM/cluster/volumes/workernode2/home:/home"
        
   workernode3:
      image: workernode-image:latest
@@ -43,4 +82,16 @@ services:
      command: /opt/bd/start-daemons.sh
      networks:
         - hadoop-net
+     ports:
+       - "39864:9864"
+       - "39865:9865"
+       - "39866:9866"
+       - "39867:9867"
+       - "38040:8040"
+       - "38042:8042"
+       - "38044:8044"
+       - "38048:8048"
+     volumes: 
+       - "/home/javi/Documentos/TFM/cluster/volumes/workernode3/home:/home"
+     
         
