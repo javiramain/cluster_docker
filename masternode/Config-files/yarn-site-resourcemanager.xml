@@ -48,5 +48,13 @@
         <value>2560</value>
         <final>true</final>
       </property>
+      <property>
+  <name>yarn.log.server.url</name>
+  <value>http://masternode:8034/ws/v1/cluster/logs/</value>
+</property>
+<property>
+  <name>yarn.timeline-service.enabled</name>
+  <value>true</value>
+</property>
 </configuration>
 

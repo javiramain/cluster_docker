@@ -24,6 +24,11 @@ if [ $status -ne 0 ]; then
   exit $status
 fi
 
+# Colocamos el fichero de pruebas en HDFS cuando haya arrancado el namenode
+sleep 3
+hdfs dfs -mkdir -p /data/csv &&
+hdfs dfs -put /home/test_data.csv /data/csv
+sleep 5
 
 # Iniciamos el demonio del resourcemanager y chequeamos si ha arrancado
 ${YARN_SERVICE} --daemon start ${RESOURCE_MANAGER_DAEMON}
@@ -39,10 +44,9 @@ do
     sleep 1 
 done
 
-# Espera un poco mas antes de crear directorios
-sleep 5
 
-
+#Arranca el servicio de zookeeper
+zookeeper-server-start.sh ${KAFKA_HOME}/config/zookeeper.properties &
 
 # Mientras el demonio esté vivo, el contenedor sigue activo
 while true

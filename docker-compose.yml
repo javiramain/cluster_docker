@@ -30,8 +30,11 @@ services:
         - "4044:4044"
         - "4045:4045"
         - "8080:8080"
+        - "2181:2181"
+
     volumes:
         - "/home/javi/Documentos/TFM/cluster/volumes/masternode/home:/home"
+
     networks:
         - hadoop-net
 
@@ -39,8 +42,8 @@ services:
   workernode1:
     build: ./workernode
     image: workernode-image:latest
-    container_name: workernode
-    hostname: workernode
+    container_name: workernode1
+    hostname: workernode1
     command: /opt/bd/start-daemons.sh
     networks:
         - hadoop-net
@@ -53,6 +56,8 @@ services:
        - "18042:8042"
        - "18044:8044"
        - "18048:8048"
+       - "9092:9092"
+       - "19092:19092"
     volumes:
        - "/home/javi/Documentos/TFM/cluster/volumes/workernode1/home:/home"
        
@@ -72,6 +77,8 @@ services:
        - "28042:8042"
        - "28044:8044"
        - "28048:8048"
+       - "9093:9093"
+       - "29093:29093"
     volumes:
        - "/home/javi/Documentos/TFM/cluster/volumes/workernode2/home:/home"
        
@@ -91,6 +98,8 @@ services:
        - "38042:8042"
        - "38044:8044"
        - "38048:8048"
+       - "9094:9094"
+       - "39094:39094"
      volumes: 
        - "/home/javi/Documentos/TFM/cluster/volumes/workernode3/home:/home"
      

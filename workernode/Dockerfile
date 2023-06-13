@@ -1,4 +1,4 @@
-FROM javira/hadoop-spark-image:latest
+FROM hadoop-spark-image:1.0.0
 
 # Dockerfile para los DataNodes/NodeManagers
 
@@ -26,6 +26,11 @@ COPY Config-files/hdfs-site-datanode.xml ${HADOOP_CONF_DIR}/hdfs-site.xml
 COPY Config-files/yarn-site-nodemanager.xml ${HADOOP_CONF_DIR}/yarn-site.xml
 COPY Config-files/mapred-site-nodemanager.xml ${HADOOP_CONF_DIR}/mapred-site.xml
 
+COPY Config-files/workernode1.server.properties ${KAFKA_HOME}/config/workernode1.server.properties
+COPY Config-files/workernode2.server.properties kafka/config/workernode2.server.properties
+COPY Config-files/workernode2.server.properties kafka/config/workernode3.server.properties
+
+
 # Script de inicio 
 COPY Config-files/start-daemons-workernode.sh ${BASE_DIR}/start-daemons.sh
 
@@ -42,6 +47,8 @@ EXPOSE 8040 8042 8044 8048
 # MapReduce ports
 EXPOSE 50000-50050 50100-50200
 
+#Kafka Ports 
+EXPOSE 9092 19092 9093 29093 9094 39094 
 
 # Define valores de entorno
 #ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
