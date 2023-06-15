@@ -5,7 +5,7 @@ ENV BASE_DIR /opt/bd
 ENV LOG_TAG "[BASE Hadoop_${HADOOP_VERSION}_Spark_${SPARK_VERSION}]:"
 
 #HADOOP VARS
-ENV HADOOP_VERSION 3.3.1
+ENV HADOOP_VERSION 3.3.5
 ENV HADOOP_REPOSITORY https://dlcdn.apache.org/hadoop/common
 
 #SPARK VARS
@@ -54,25 +54,32 @@ RUN echo "${LOG_TAG} Descargando Kakfa" && \
     rm kafka_2.12-3.4.0.tgz
 
 # ENV VARS
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
-ENV PATH ${PATH}:{JAVA_HOME}bin
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV PATH ${PATH}:${JAVA_HOME}/bin
+
+#KAFKA ENV VARS
+ENV KAFKA_HOME=${BASE_DIR}/kafka
+ENV PATH=${PATH}:${KAFKA_HOME}/bin
+
 
 #HADOOP AND YARN ENV VARS
-ENV HADOOP_HOME ${BASE_DIR}/hadoop/
+ENV HADOOP_HOME ${BASE_DIR}/hadoop
 ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop/
+
 
 #ENV YARN_CONF_DIR ${HADOOP_HOME}/etc/hadoop/ --> ha sido reemplazado por hadoop_conf_dir
 ENV DATA_DIR /var/data/hadoop/hdfs
-ENV PATH ${PATH}:${HADOOP_HOME}bin/:${HADOOP_HOME}sbin/
+ENV PATH ${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin/
 
 #SPARK_ENV_VARS
-ENV SPARK_HOME=${BASE_DIR}/spark/
-ENV SPARK_CONF_DIR=${SPARK_HOME}/
-ENV PATH=$PATH:$SPARK_HOME/bin
+ENV SPARK_HOME=${BASE_DIR}/spark
+#ENV SPARK_CONF_DIR=${SPARK_HOME}/
+ENV SPARK_CONF_DIR=${SPARK_HOME}/conf  
+ENV PATH=${PATH}:${SPARK_HOME}/bin
 
 #KAFKA ENV VARS
-ENV KAFKA_HOME=${BASE_DIR}/kafka/
-ENV PATH=$PATH:$KAFKA_HOME/bin
+#ENV KAFKA_HOME=${BASE_DIR}/kafka/
+#ENV PATH=$PATH:$KAFKA_HOME/bin
 
 
 # Copia ficheros de configuracion de spark

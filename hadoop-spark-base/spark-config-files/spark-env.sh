@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 SPARK_DIST_CLASSPATH=$(${HADOOP_HOME}/bin/hadoop classpath)
-export SPARK_DIST_CLASSPATH="$SPARK_DIST_CLASSPATH:$HADOOP_HOME/share/hadoop/tools/lib/*"
+export SPARK_DIST_CLASSPATH="$SPARK_DIST_CLASSPATH:$HADOOP_HOME/share/hadoop/tools/lib/*:$KAFKA_HOME/lib/*"
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with

@@ -1,4 +1,4 @@
-FROM hadoop-spark-image:1.0.0
+FROM hadoop-spark-image:2.0.0
 
 # Dockerfile para los DataNodes/NodeManagers
 
@@ -6,8 +6,6 @@ FROM hadoop-spark-image:1.0.0
 #ENV HADOOP_VERSION 3.3.1
 ENV LOG_TAG "[Workernode]:"
 ENV BASE_DIR /opt/bd
-ENV HADOOP_HOME ${BASE_DIR}/hadoop/
-ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop/
 ENV DATA_DIR /var/data/hadoop/hdfs
 
 

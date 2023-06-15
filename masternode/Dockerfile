@@ -1,20 +1,18 @@
-FROM hadoop-spark-image:1.0.0
+FROM hadoop-spark-image:2.0.0
 
 # Dockerfile para el NameNode
 # Switch to root user
 USER root
 
 # Define valores de entorno
-ENV HADOOP_VERSION 3.3.1
 ENV LOG_TAG "[Masternode]:"
 ENV BASE_DIR /opt/bd
-ENV HADOOP_HOME ${BASE_DIR}/hadoop/
-ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop/
+
 ENV DATA_DIR /var/data/hadoop/hdfs
 
 #KAFKA ENV VARS
-ENV KAFKA_HOME=${BASE_DIR}/kafka
-ENV PATH=$PATH:$KAFKA_HOME/bin
+#ENV KAFKA_HOME=${BASE_DIR}/kafka
+#ENV PATH=$PATH:$KAFKA_HOME/bin
 
 # Crea directorios para los datos de HDFS del NameNode
 # En un sistema real, deberíamos crear varios directorios en particiones separadas con suficiente espacio libre.

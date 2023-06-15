@@ -48,6 +48,10 @@ done
 #Arranca el servicio de zookeeper
 zookeeper-server-start.sh ${KAFKA_HOME}/config/zookeeper.properties &
 
+#Esperamos a que zookeeper este levantado y los workers levanten el servicio de kafka,
+# y se crea el topic que servirá para trasladar la consulta al Streaming
+sleep 10 &
+kafka-topics.sh --create --topic streaming-query --bootstrap-server workernode1:9092
 # Mientras el demonio esté vivo, el contenedor sigue activo
 while true
 do 
