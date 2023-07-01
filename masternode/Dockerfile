@@ -24,17 +24,21 @@ RUN echo "$LOG_TAG Crea directorio para los ficheros de log" && \
     mkdir ${HADOOP_HOME}/logs
 
 
-# Copia los ficheros de configuracion
+# Copia los ficheros de configuracion de hadoop, hdfs, yarn y mapReduce
 RUN echo "$LOG_TAG Copia los ficheros de configuracion y el script de inicio"
 COPY Config-files/core-site.xml ${HADOOP_CONF_DIR}/core-site.xml
 COPY Config-files/hdfs-site-namenode.xml ${HADOOP_CONF_DIR}/hdfs-site.xml
 COPY Config-files/yarn-site-resourcemanager.xml ${HADOOP_CONF_DIR}/yarn-site.xml
 COPY Config-files/mapred-site-resourcemanager.xml ${HADOOP_CONF_DIR}/mapred-site.xml
 
+# Copia los el fichero de configuracion de zookeeper
 COPY Config-files/zookeeper.properties ${KAFKA_HOME}/config/zookeeper.properties
 
+#Copia el fichero de configuracion del servicio de mongodb
+COPY Config-files/mongod.conf /etc/mongod.conf
 
-# Script de inicio 
+
+# Copia el script de inicio de todos los servicios
 COPY Config-files/start-daemons-masternode.sh ${BASE_DIR}/start-daemons.sh
 
 # Establece permisos de ejecución

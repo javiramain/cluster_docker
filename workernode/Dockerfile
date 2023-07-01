@@ -24,9 +24,15 @@ COPY Config-files/hdfs-site-datanode.xml ${HADOOP_CONF_DIR}/hdfs-site.xml
 COPY Config-files/yarn-site-nodemanager.xml ${HADOOP_CONF_DIR}/yarn-site.xml
 COPY Config-files/mapred-site-nodemanager.xml ${HADOOP_CONF_DIR}/mapred-site.xml
 
+#Copia los ficheros de configuracion del servicio de kafka  
 COPY Config-files/workernode1.server.properties ${KAFKA_HOME}/config/workernode1.server.properties
-COPY Config-files/workernode2.server.properties kafka/config/workernode2.server.properties
-COPY Config-files/workernode2.server.properties kafka/config/workernode3.server.properties
+COPY Config-files/workernode2.server.properties ${KAFKA_HOME}/config/workernode2.server.properties
+COPY Config-files/workernode3.server.properties ${KAFKA_HOME}/config/workernode3.server.properties
+
+#Copia el fichero de configuracion del servicio de mongoDb
+COPY Config-files/mongod.conf /etc/mongod.conf
+#COPY Config-files/workernode2.server.properties kafka/config/workernode2.server.properties
+#COPY Config-files/workernode2.server.properties kafka/config/workernode3.server.properties
 
 
 

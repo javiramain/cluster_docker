@@ -40,10 +40,10 @@ echo "para el $HOSTNAME se asigna el puerto $puerto"
 # Se crean los directorios de datos necesarios en las rutas que serviran de volumen
 mkdir -p /home/mongo/db/
 
-#Arrancamos el servicio de mongoDB
-mongod --port 27017 --bind_ip_all --dbpath /home/mongo/db --replSet mongodbReplicaSet 
+#Arrancamos en segundo plano el servicio de mongoDB
+mongod --config /etc/mongod.conf --bind_ip_all &
 
-#Arrancamos brokers de kafka, esperando a que el servicio de zookeeper este activo:
+#Arrancamos en segundo plano brokers de kafka, esperando a que el servicio de zookeeper este activo:
 sleep 5
 kafka-server-start.sh ${KAFKA_HOME}/config/$(hostname).server.properties &
 

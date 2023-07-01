@@ -25,10 +25,10 @@ if [ $status -ne 0 ]; then
 fi
 
 # Colocamos el fichero de pruebas en HDFS cuando haya arrancado el namenode
-sleep 3
-hdfs dfs -mkdir -p /data/csv &&
-hdfs dfs -put /home/test_data.csv /data/csv
-sleep 5
+#sleep 3
+#hdfs dfs -mkdir -p /data/csv &&
+#hdfs dfs -put /home/test_data.csv /data/csv
+#sleep 5
 
 # Iniciamos el demonio del resourcemanager y chequeamos si ha arrancado
 ${YARN_SERVICE} --daemon start ${RESOURCE_MANAGER_DAEMON}
@@ -47,17 +47,19 @@ done
 # Se crean los directorios de datos necesarios en las rutas que serviran de volumen
 mkdir -p /home/zookeeper/data && mkdir -p /home/mongo/db
 
-#Arrancamos el servicio de mongoDB
-mongod --port 27017 --bind_ip_all --dbpath /home/mongo/db --replSet mongodbReplicaSet &
+#Arrancamos en segundo plano el servicio de mongoDB
+mongod --config /etc/mongod.conf --bind_ip_all &
 
 
-#Arranca el servicio de zookeeper
+#Arranca en segundo plano el servicio de zookeeper
 zookeeper-server-start.sh ${KAFKA_HOME}/config/zookeeper.properties &
 
 #Esperamos a que zookeeper este levantado y los workers levanten el servicio de kafka,
 # y se crea el topic que servirá para trasladar la consulta al Streaming
-sleep 10 
+sleep 3
 kafka-topics.sh --create --topic streaming-query --bootstrap-server workernode1:9092
+kafka-topics.sh --create --topic output --bootstrap-server workernode1:9092
+
 # Mientras el demonio esté vivo, el contenedor sigue activo
 while true
 do 
