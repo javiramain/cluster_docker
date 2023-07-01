@@ -23,6 +23,7 @@ RUN echo "$LOG_TAG Crea directorios para los datos de HDFS del NameNode" && \
 RUN echo "$LOG_TAG Crea directorio para los ficheros de log" && \
     mkdir ${HADOOP_HOME}/logs
 
+
 # Copia los ficheros de configuracion
 RUN echo "$LOG_TAG Copia los ficheros de configuracion y el script de inicio"
 COPY Config-files/core-site.xml ${HADOOP_CONF_DIR}/core-site.xml
@@ -31,7 +32,6 @@ COPY Config-files/yarn-site-resourcemanager.xml ${HADOOP_CONF_DIR}/yarn-site.xml
 COPY Config-files/mapred-site-resourcemanager.xml ${HADOOP_CONF_DIR}/mapred-site.xml
 
 COPY Config-files/zookeeper.properties ${KAFKA_HOME}/config/zookeeper.properties
-RUN mkdir -p /home/zookeeper/data
 
 
 # Script de inicio 
@@ -55,8 +55,11 @@ EXPOSE 8034
 # Expose Spark Ports (from 4040 onward for each sparkContext)
 EXPOSE 4040-4045 8080 
 
-#Espose zookeeper port
+# Expose zookeeper port
 EXPOSE 2181 9092
+
+# Expose mongo default and aditional port
+EXPOSE 27017-27027
 
 WORKDIR ${HADOOP_HOME}
 

@@ -1,5 +1,6 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 
+USER root
 
 ENV BASE_DIR /opt/bd
 ENV LOG_TAG "[BASE Hadoop_${HADOOP_VERSION}_Spark_${SPARK_VERSION}]:"
@@ -9,14 +10,18 @@ ENV HADOOP_VERSION 3.3.5
 ENV HADOOP_REPOSITORY https://dlcdn.apache.org/hadoop/common
 
 #SPARK VARS
-ENV SPARK_VERSION 3.4.0
-ENV SPARK_REPOSITORY https://dlcdn.apache.org/spark
+ENV SPARK_VERSION 3.3.1
+ENV SPARK_REPOSITORY https://archive.apache.org/dist/spark
 
+#KAKFA_VARS
+ENV KAFKA_VERSION 2.12-2.8.1
+ENV KAFKA_SHORT_VERSION 2.8.1
+ENV KAFKA_REPOSITORY https://archive.apache.org/dist/kafka
 
 # STEP 1: Instala java y demas software necesario
 RUN echo "$LOG_TAG Actualizando e instalando paquetes básicos" && \
     apt-get update && \
-    apt-get install -y openjdk-8-jre python3 curl locales iputils-ping nano && \
+    apt-get install -y openjdk-8-jre python3 curl locales iputils-ping nano systemd && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists
 
@@ -32,7 +37,7 @@ WORKDIR ${BASE_DIR}
 
 #DESCARGAS:
 
-# Descarga la versión 3.1.1 Hadoop en /opt/bd y crea enlace simbolico a "hadoop"
+# Descarga la versión 3.3.5 de Hadoop en /opt/bd y crea enlace simbolico a "hadoop"
 RUN echo "$LOG_TAG Descargando Hadoop" && \
     curl -fLO "${HADOOP_REPOSITORY}/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz"  && \
     tar xzvf hadoop-${HADOOP_VERSION}.tar.gz && \
@@ -46,17 +51,37 @@ RUN echo "${LOG_TAG} Descargando Spark" && \
     ln -s spark-${SPARK_VERSION}-bin-without-hadoop spark && \
     rm spark-${SPARK_VERSION}-bin-without-hadoop.tgz
 
-#Descarga Kafka:
+# Descarga la version 2.8.1 de Kafka en /opt/bd y crea enlace simbolico a "kafka":
 RUN echo "${LOG_TAG} Descargando Kakfa" && \
-	curl -fLO https://downloads.apache.org/kafka/3.4.0/kafka_2.12-3.4.0.tgz && \
-	tar xzvf kafka_2.12-3.4.0.tgz && \
-    ln -s kafka_2.12-3.4.0 kafka && \
-    rm kafka_2.12-3.4.0.tgz
+	curl -fLO "${KAFKA_REPOSITORY}/${KAFKA_SHORT_VERSION}/kafka_${KAFKA_VERSION}.tgz" && \
+	tar xzvf kafka_${KAFKA_VERSION}.tgz && \
+    ln -s kafka_${KAFKA_VERSION} kafka && \
+    rm kafka_${KAFKA_VERSION}.tgz
 
+# Descarga la version 5.0.16 de MongoDb a traves del gestor de paquetes apt. Instala libssl1.1, necesario para la instalacion de mongo en ubuntu 22.04
+RUN echo "${LOG_TAG} Descargando MongoDB" && \
+    apt-get update && \
+    apt-get install -y gnupg && \
+    curl https://pgp.mongodb.com/server-4.4.asc | \
+    gpg -o /usr/share/keyrings/mongodb-server-4.4.gpg \
+    --dearmor && \
+    echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-4.4.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list && \
+	apt-get update && \
+    apt-get install -y mongodb-org=4.4.22 mongodb-org-server=4.4.22 mongodb-org-shell=4.4.22 mongodb-org-mongos=4.4.22 mongodb-org-tools=4.4.22
+
+
+# Fijar la version de los paquetes para que Mongo no se acutalice de forma automatica 
+RUN echo "mongodb-org hold" | dpkg --set-selections && \
+echo "mongodb-org-database hold" | dpkg --set-selections && \
+echo "mongodb-org-server hold" | dpkg --set-selections && \
+echo "mongodb-org-shell hold" | dpkg --set-selections  && \
+echo "mongodb-org-mongos hold" | dpkg --set-selections  && \
+echo "mongodb-org-tools hold" | dpkg --set-selections
+	
 # ENV VARS
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 ENV PATH ${PATH}:${JAVA_HOME}/bin
-
+ENV PATH ${PATH}:/usr/bin/systemctl
 #KAFKA ENV VARS
 ENV KAFKA_HOME=${BASE_DIR}/kafka
 ENV PATH=${PATH}:${KAFKA_HOME}/bin

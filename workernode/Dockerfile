@@ -29,6 +29,7 @@ COPY Config-files/workernode2.server.properties kafka/config/workernode2.server.
 COPY Config-files/workernode2.server.properties kafka/config/workernode3.server.properties
 
 
+
 # Script de inicio 
 COPY Config-files/start-daemons-workernode.sh ${BASE_DIR}/start-daemons.sh
 
@@ -48,12 +49,8 @@ EXPOSE 50000-50050 50100-50200
 #Kafka Ports 
 EXPOSE 9092 19092 9093 29093 9094 39094 
 
-# Define valores de entorno
-#ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
-#ENV HADOOP_HOME ${BASE_DIR}/hadoop/
-#ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop/
-#ENV PATH ${PATH}:${HADOOP_HOME}/bin/:${HADOOP_HOME}/sbin/:
-
+# Expose mongo default and aditional port
+EXPOSE 27017-27027
 
 WORKDIR ${HADOOP_HOME}
 

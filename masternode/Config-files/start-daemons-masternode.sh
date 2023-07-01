@@ -44,13 +44,19 @@ do
     sleep 1 
 done
 
+# Se crean los directorios de datos necesarios en las rutas que serviran de volumen
+mkdir -p /home/zookeeper/data && mkdir -p /home/mongo/db
+
+#Arrancamos el servicio de mongoDB
+mongod --port 27017 --bind_ip_all --dbpath /home/mongo/db --replSet mongodbReplicaSet &
+
 
 #Arranca el servicio de zookeeper
 zookeeper-server-start.sh ${KAFKA_HOME}/config/zookeeper.properties &
 
 #Esperamos a que zookeeper este levantado y los workers levanten el servicio de kafka,
 # y se crea el topic que servirá para trasladar la consulta al Streaming
-sleep 10 &
+sleep 10 
 kafka-topics.sh --create --topic streaming-query --bootstrap-server workernode1:9092
 # Mientras el demonio esté vivo, el contenedor sigue activo
 while true
