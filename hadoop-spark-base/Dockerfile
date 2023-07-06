@@ -18,10 +18,10 @@ ENV KAFKA_VERSION 2.12-2.8.1
 ENV KAFKA_SHORT_VERSION 2.8.1
 ENV KAFKA_REPOSITORY https://archive.apache.org/dist/kafka
 
-# STEP 1: Instala java y demas software necesario
+# STEP 1: Instala java y demas software necesario. Quitar lo que ya no es necesario
 RUN echo "$LOG_TAG Actualizando e instalando paquetes básicos" && \
     apt-get update && \
-    apt-get install -y openjdk-8-jre python3 curl locales iputils-ping nano systemd && \
+    apt-get install -y openjdk-8-jre python3 curl locales nano systemd && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists
 
@@ -36,6 +36,7 @@ RUN mkdir -p ${BASE_DIR}
 WORKDIR ${BASE_DIR}
 
 #DESCARGAS:
+RUN apt-get update && apt-get install -y python3-pip
 
 # Descarga la versión 3.3.5 de Hadoop en /opt/bd y crea enlace simbolico a "hadoop"
 RUN echo "$LOG_TAG Descargando Hadoop" && \

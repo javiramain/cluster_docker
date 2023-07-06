@@ -27,15 +27,15 @@ if [ $status -ne 0 ]; then
 fi
 
 # Se asigna a cada workernode del cluster un puerto para el servicio de mongoDB
-if [[ "$HOSTNAME" = "workernode1" ]];  then 
-    puerto="27019"
-elif [[ "$HOSTNAME" = "workernode2" ]]; then 
-    puerto="27020"
-elif [[ "$HOSTNAME" = "workernode3" ]]; then 
-    puerto="27021"
-fi
+#if [[ "$HOSTNAME" = "workernode1" ]];  then 
+#    puerto="27019"
+#elif [[ "$HOSTNAME" = "workernode2" ]]; then 
+#    puerto="27020"
+#elif [[ "$HOSTNAME" = "workernode3" ]]; then 
+#    puerto="27021"
+#fi
 
-echo "para el $HOSTNAME se asigna el puerto $puerto"
+#echo "para el $HOSTNAME se asigna el puerto $puerto"
 
 # Se crean los directorios de datos necesarios en las rutas que serviran de volumen
 mkdir -p /home/mongo/db/

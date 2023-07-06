@@ -9,6 +9,7 @@ ENV LOG_TAG "[Masternode]:"
 ENV BASE_DIR /opt/bd
 
 ENV DATA_DIR /var/data/hadoop/hdfs
+ENV HOME_DIR /home
 
 #KAFKA ENV VARS
 #ENV KAFKA_HOME=${BASE_DIR}/kafka
@@ -37,9 +38,13 @@ COPY Config-files/zookeeper.properties ${KAFKA_HOME}/config/zookeeper.properties
 #Copia el fichero de configuracion del servicio de mongodb
 COPY Config-files/mongod.conf /etc/mongod.conf
 
-
+COPY scripts/streamlit.py /home/streamlit/streamlit.py
 # Copia el script de inicio de todos los servicios
 COPY Config-files/start-daemons-masternode.sh ${BASE_DIR}/start-daemons.sh
+
+# Instala paquetes de streamlit y kafka-python para el producer y el consumer de la webapp
+RUN yes | pip install streamlit
+RUN yes | pip install kafka-python
 
 # Establece permisos de ejecución
 RUN chmod +x ${BASE_DIR}/start-daemons.sh
@@ -65,7 +70,10 @@ EXPOSE 2181 9092
 # Expose mongo default and aditional port
 EXPOSE 27017-27027
 
-WORKDIR ${HADOOP_HOME}
+# Expose streamlit port so you can access it from your localo web browser
+EXPOSE 8501 
+
+WORKDIR ${HOME_DIR}
 
 RUN echo "$LOG_TAG Iniciando demonios"
 CMD ["/opt/bd/start-daemons.sh"]

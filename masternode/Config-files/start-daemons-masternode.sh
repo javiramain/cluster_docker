@@ -44,8 +44,8 @@ do
     sleep 1 
 done
 
-# Se crean los directorios de datos necesarios en las rutas que serviran de volumen
-mkdir -p /home/zookeeper/data && mkdir -p /home/mongo/db
+# Se crean los directorios de datos necesarios en las rutas que serviran de volumen si no existen
+mkdir -p /home/zookeeper/data && mkdir -p /home/mongo/db && mkdir -p /home/streamlit
 
 #Arrancamos en segundo plano el servicio de mongoDB
 mongod --config /etc/mongod.conf --bind_ip_all &
@@ -59,6 +59,13 @@ zookeeper-server-start.sh ${KAFKA_HOME}/config/zookeeper.properties &
 sleep 3
 kafka-topics.sh --create --topic streaming-query --bootstrap-server workernode1:9092
 kafka-topics.sh --create --topic output --bootstrap-server workernode1:9092
+
+
+# Arrancar la web-app
+streamlit run /home/streamlit/streamlit.py &
+
+# Arrancar el streaming
+sh /home/bin/run-spark-streaming.sh &
 
 # Mientras el demonio esté vivo, el contenedor sigue activo
 while true
