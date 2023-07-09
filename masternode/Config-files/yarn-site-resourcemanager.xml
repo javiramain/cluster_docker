@@ -26,7 +26,7 @@
              Requests higher than this will throw an 
              InvalidResourceRequestException (default value 4) -->
         <name>yarn.scheduler.maximum-allocation-vcores</name>
-        <value>1</value>
+        <value>4</value>
         <final>true</final>
       </property>
 

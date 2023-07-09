@@ -44,7 +44,7 @@
   <property>
     <!--  The number of virtual CPU cores the MR AppMaster needs (default value 1) -->
     <name>yarn.app.mapreduce.am.resource.cpu-vcores</name>
-    <value>1</value>
+    <value>4</value>
     <final>true</final>
   </property>
 
@@ -106,7 +106,7 @@
   <property>
     <!-- The number of virtual cores to request for each reduce task (default value 1) -->
     <name>mapreduce.reduce.cpu.vcores</name>
-    <value>1</value>
+    <value>4</value>
     <final>true</final>
   </property>
 

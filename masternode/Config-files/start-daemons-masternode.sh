@@ -27,7 +27,7 @@ fi
 # Colocamos el fichero de pruebas en HDFS cuando haya arrancado el namenode
 #sleep 3
 #hdfs dfs -mkdir -p /data/csv &&
-#hdfs dfs -put /home/test_data.csv /data/csv
+#hdfs dfs -put /home/data/test_data.csv /data/csv
 #sleep 5
 
 # Iniciamos el demonio del resourcemanager y chequeamos si ha arrancado
@@ -45,7 +45,10 @@ do
 done
 
 # Se crean los directorios de datos necesarios en las rutas que serviran de volumen si no existen
-mkdir -p /home/zookeeper/data && mkdir -p /home/mongo/db && mkdir -p /home/streamlit
+mkdir -p /home/zookeeper/data && mkdir -p /home/mongo/db
+
+# Se copian los scripts de ejecucion y de streamlit
+cp -r /streamlit /home && cp -r /scripts /home
 
 #Arrancamos en segundo plano el servicio de mongoDB
 mongod --config /etc/mongod.conf --bind_ip_all &
@@ -62,10 +65,10 @@ kafka-topics.sh --create --topic output --bootstrap-server workernode1:9092
 
 
 # Arrancar la web-app
-streamlit run /home/streamlit/streamlit.py &
+streamlit run /home/streamlit/busqueda.py &
 
 # Arrancar el streaming
-sh /home/bin/run-spark-streaming.sh &
+sh /home/scripts/run-spark-streaming.sh &
 
 # Mientras el demonio esté vivo, el contenedor sigue activo
 while true

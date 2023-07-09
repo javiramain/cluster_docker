@@ -38,7 +38,14 @@ COPY Config-files/zookeeper.properties ${KAFKA_HOME}/config/zookeeper.properties
 #Copia el fichero de configuracion del servicio de mongodb
 COPY Config-files/mongod.conf /etc/mongod.conf
 
-COPY scripts/streamlit.py /home/streamlit/streamlit.py
+#Copia los scripts de streamlit y la carpeta donde se depositan temporalmente los ficheros
+COPY streamlit/ /streamlit
+#COPY streamlit/pages/carga_datos.py /streamlit/pages
+
+# Copia los scripts de arranque de spark y hdfs
+COPY scripts /scripts
+
+
 # Copia el script de inicio de todos los servicios
 COPY Config-files/start-daemons-masternode.sh ${BASE_DIR}/start-daemons.sh
 
