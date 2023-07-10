@@ -83,6 +83,7 @@ echo "mongodb-org-tools hold" | dpkg --set-selections
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 ENV PATH ${PATH}:${JAVA_HOME}/bin
 ENV PATH ${PATH}:/usr/bin/systemctl
+
 #KAFKA ENV VARS
 ENV KAFKA_HOME=${BASE_DIR}/kafka
 ENV PATH=${PATH}:${KAFKA_HOME}/bin

@@ -37,7 +37,7 @@ st.write("""
 ## Subir fichero a HDFS
 """)
 def uploadToHDFS():
-    subprocess.run([f"{sys.executable}", "/home/scripts/putFileToHDFS.sh"])
+    subprocess.run(['bash', "/home/scripts/putFileToHDFS.sh"])
     st.write("Fichero subido. Revise HDFS.")
 FsToHdfs = st.button("Subir a HDFS", on_click=uploadToHDFS)
 
@@ -46,7 +46,7 @@ st.write("""
 """)
 
 def loadInfoToMongo():
-    subprocess.run([f"{sys.executable}", "/home/scripts/run_spark_batch.sh"])
+    subprocess.run(['bash', "/home/scripts/run-spark-batch.sh"])
     st.write("Fichero subido. Revise HDFS.")
 
 loadToMongo = st.button("Cargar en base de datos", on_click=loadInfoToMongo)

@@ -31,6 +31,7 @@ COPY Config-files/core-site.xml ${HADOOP_CONF_DIR}/core-site.xml
 COPY Config-files/hdfs-site-namenode.xml ${HADOOP_CONF_DIR}/hdfs-site.xml
 COPY Config-files/yarn-site-resourcemanager.xml ${HADOOP_CONF_DIR}/yarn-site.xml
 COPY Config-files/mapred-site-resourcemanager.xml ${HADOOP_CONF_DIR}/mapred-site.xml
+COPY Config-files/capacity-scheduler.xml ${HADOOP_CONF_DIR}/capacity-scheduler.xml
 
 # Copia los el fichero de configuracion de zookeeper
 COPY Config-files/zookeeper.properties ${KAFKA_HOME}/config/zookeeper.properties
@@ -47,14 +48,14 @@ COPY scripts /scripts
 
 
 # Copia el script de inicio de todos los servicios
-COPY Config-files/start-daemons-masternode.sh ${BASE_DIR}/start-daemons.sh
+COPY scripts/start-services-masternode.sh ${BASE_DIR}/start-services.sh
 
 # Instala paquetes de streamlit y kafka-python para el producer y el consumer de la webapp
 RUN yes | pip install streamlit
 RUN yes | pip install kafka-python
 
 # Establece permisos de ejecución
-RUN chmod +x ${BASE_DIR}/start-daemons.sh
+RUN chmod +x ${BASE_DIR}/start-services.sh
 
 #RUN zookeeper-server-start.sh ${KAFKA_HOME}/config/zookeeper.properties &&
 #RUN kafka-server-start.sh ${KAFKA_HOME}/config/server.properties &
@@ -77,10 +78,10 @@ EXPOSE 2181 9092
 # Expose mongo default and aditional port
 EXPOSE 27017-27027
 
-# Expose streamlit port so you can access it from your localo web browser
+# Expose streamlit port so you can access it from your local web browser
 EXPOSE 8501 
 
 WORKDIR ${HOME_DIR}
 
 RUN echo "$LOG_TAG Iniciando demonios"
-CMD ["/opt/bd/start-daemons.sh"]
+CMD ["/opt/bd/start-services.sh"]

@@ -11,7 +11,7 @@ services:
     image: masternode-image:latest
     container_name: masternode
     hostname: masternode
-    command: /opt/bd/start-daemons.sh
+    command: /opt/bd/start-services.sh
     ports:
         - "8020:8020"
         - "9820:9820"
@@ -58,7 +58,7 @@ services:
     image: workernode-image:latest
     container_name: workernode1
     hostname: workernode1
-    command: /opt/bd/start-daemons.sh
+    command: /opt/bd/start-services.sh
     networks:
         - hadoop-net
     ports:
@@ -85,7 +85,7 @@ services:
     image: workernode-image:latest
     container_name: workernode2
     hostname: workernode2
-    command: /opt/bd/start-daemons.sh
+    command: /opt/bd/start-services.sh
     networks:
        - hadoop-net
     ports:
@@ -111,7 +111,7 @@ services:
      image: workernode-image:latest
      container_name: workernode3
      hostname: workernode3
-     command: /opt/bd/start-daemons.sh
+     command: /opt/bd/start-services.sh
      networks:
         - hadoop-net
      ports:

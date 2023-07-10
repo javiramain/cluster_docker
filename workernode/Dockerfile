@@ -37,10 +37,10 @@ COPY Config-files/mongod.conf /etc/mongod.conf
 
 
 # Script de inicio 
-COPY Config-files/start-daemons-workernode.sh ${BASE_DIR}/start-daemons.sh
+COPY Config-files/start-services-workernode.sh ${BASE_DIR}/start-services.sh
 
 # Establece permisos de ejecucion
-RUN chmod +x ${BASE_DIR}/start-daemons.sh 
+RUN chmod +x ${BASE_DIR}/start-services.sh 
 
 # EXPOSE PORTS
 # Datanode ports
@@ -61,4 +61,4 @@ EXPOSE 27017-27027
 WORKDIR ${HADOOP_HOME}
 
 RUN echo "$LOG_TAG Iniciando demonios"
-CMD ["/opt/bd/start-daemons.sh"]
+CMD ["/opt/bd/start-services.sh"]

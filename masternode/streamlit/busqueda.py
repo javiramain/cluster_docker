@@ -11,17 +11,17 @@ import streamlit as st
 st.title('Bienvenido a ElMercado.com')
 st.header('Estás en la seccion de busqueda')
 st.subheader('Busca aqui el artículo que quieras comprar')
-articulo= st.text_input("Describe tu articulo")
+articulo= st.text_input("Describe tu articulo y pulsa enter")
 # tienda = st.text_input("Quieres comprar en una tienda en particular? Introduce el nombre de la tienda")
 # initializing the Kafka producer
 my_producer = KafkaProducer(
     bootstrap_servers = ['workernode1:9092'],
     value_serializer = lambda x:dumps(x).encode('utf-8')
     )
-def sendMessage ():
-    my_producer.send('streaming-query', value = articulo)
 
-buy = st.button('BUSCAR', 'key1', 'this button is used to buy stuff', on_click=sendMessage)
+my_producer.send('streaming-query', value = articulo)
+
+# buy = st.button('BUSCAR', 'key1', 'this button is used to buy stuff', on_click=sendMessage)
 
 # st.text(mytext)
 # st.text('this is text')
