@@ -1,10 +1,15 @@
 version: '3.1'
 
 networks:
-    hadoop-net:
+    elmercado-cluster:
         driver: bridge
 
 services:
+
+  hadoop-spark-image:
+    build: ./hadoop-spark-base
+    image: hadoop-spark-image:2.0.0
+    
 
   masternode:
     build: ./masternode
@@ -50,7 +55,10 @@ services:
         - "/home/javi/Documentos/TFM/cluster/volumes/masternode/home:/home"
 
     networks:
-        - hadoop-net
+        - elmercado-cluster
+       
+    depends_on: 
+        - hadoop-spark-image
 
 
   workernode1:
@@ -60,7 +68,7 @@ services:
     hostname: workernode1
     command: /opt/bd/start-services.sh
     networks:
-        - hadoop-net
+        - elmercado-cluster
     ports:
        - "19864:9864"
        - "19865:9865"
@@ -80,6 +88,11 @@ services:
        
     volumes:
        - "/home/javi/Documentos/TFM/cluster/volumes/workernode1/home:/home"
+    
+    depends_on:
+        - hadoop-spark-image
+
+    
        
   workernode2:
     image: workernode-image:latest
@@ -87,7 +100,7 @@ services:
     hostname: workernode2
     command: /opt/bd/start-services.sh
     networks:
-       - hadoop-net
+       - elmercado-cluster
     ports:
        - "29864:9864"
        - "29865:9865"
@@ -106,6 +119,11 @@ services:
        - "27221:27021"
     volumes:
        - "/home/javi/Documentos/TFM/cluster/volumes/workernode2/home:/home"
+    
+    depends_on:
+        - hadoop-spark-image
+
+    
        
   workernode3:
      image: workernode-image:latest
@@ -113,7 +131,7 @@ services:
      hostname: workernode3
      command: /opt/bd/start-services.sh
      networks:
-        - hadoop-net
+        - elmercado-cluster
      ports:
        - "39864:9864"
        - "39865:9865"
@@ -132,5 +150,10 @@ services:
        - "27321:27021"
      volumes: 
        - "/home/javi/Documentos/TFM/cluster/volumes/workernode3/home:/home"
+       
+     depends_on:
+        - hadoop-spark-image
+
+
      
         

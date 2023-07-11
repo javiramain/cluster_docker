@@ -1,0 +1,1 @@
+hdfs dfs -rm /data/json/input/*

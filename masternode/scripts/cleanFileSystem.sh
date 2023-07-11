@@ -1,0 +1,1 @@
+rm /home/streamlit/data/*
