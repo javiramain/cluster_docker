@@ -39,7 +39,7 @@ fi
 
 # Se crean los directorios de datos necesarios en las rutas que serviran de volumen
 mkdir -p /home/mongo/db/
-
+sleep 5
 #Arrancamos en segundo plano el servicio de mongoDB
 mongod --config /etc/mongod.conf --bind_ip_all &
 

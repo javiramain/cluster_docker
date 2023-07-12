@@ -1,0 +1,128 @@
+[{
+  "id_articulo": "0001",
+  "nombre_articulo": "iPhone 12",
+  "palabras_clave": ["telefono", "movil", "iphone", "apple"],
+  "caracteristicas_venta": {
+    "marca": "Apple",
+    "modelo": "iPhone 12",
+    "pantalla": "6.1 pulgadas",
+    "almacenamiento": "128GB",
+    "color": "Negro",
+    "precio": 999.99
+  }
+},
+{
+  "id_articulo": "0002",
+  "nombre_articulo": "Samsung QLED 4K TV",
+  "palabras_clave": ["television", "QLED", "4K", "Samsung"],
+  "caracteristicas_venta": {
+    "marca": "Samsung",
+    "modelo": "Q60T",
+    "pulgadas": 55,
+    "resolucion": "4K Ultra HD",
+    "smart_tv": true,
+    "precio": 899.99
+  }
+},
+{
+  "id_articulo": "0003",
+  "nombre_articulo": "Dyson V11",
+  "palabras_clave": ["aspiradora", "Dyson", "sin cable"],
+  "caracteristicas_venta": {
+    "marca": "Dyson",
+    "modelo": "V11",
+    "tipo": "sin cable",
+    "capacidad": "0.76 litros",
+    "batería": "hasta 60 minutos",
+    "precio": 599.99
+  }
+},
+{
+  "id_articulo": "0004",
+  "nombre_articulo": "Nike Air Max 90",
+  "palabras_clave": ["calzado", "zapatillas", "Nike", "deportivas"],
+  "caracteristicas_venta": {
+    "marca": "Nike",
+    "modelo": "Air Max 90",
+    "color": "Blanco",
+    "talla": ["US 9", "EU 42.5", "UK 8"],
+    "precio": 129.99
+  }
+},
+{
+  "id_articulo": "0005",
+  "nombre_articulo": "Chanel Coco Mademoiselle",
+  "palabras_clave": ["perfume", "Chanel", "Coco Mademoiselle"],
+  "caracteristicas_venta": {
+    "marca": "Chanel",
+    "nombre": "Coco Mademoiselle",
+    "volumen": "100ml",
+    "tipo": "Eau de Parfum",
+    "precio": 149.99
+  }
+},
+{
+  "id_articulo": "0006",
+  "nombre_articulo": "Samsung Galaxy S21",
+  "palabras_clave": ["telefono", "movil", "Samsung", "Galaxy"],
+  "caracteristicas_venta": {
+    "marca": "Samsung",
+    "modelo": "Galaxy S21",
+    "pantalla": "6.2 pulgadas",
+    "almacenamiento": "256GB",
+    "color": "Gris",
+    "precio": 899.99
+  }
+},
+{
+  "id_articulo": "0007",
+  "nombre_articulo": "LG OLED 4K TV",
+  "palabras_clave": ["television", "OLED", "4K", "LG"],
+  "caracteristicas_venta": {
+    "marca": "LG",
+    "modelo": "C1",
+    "pulgadas": 65,
+    "resolucion": "4K Ultra HD",
+    "smart_tv": true,
+    "precio": 1699.99
+  }
+},
+{
+  "id_articulo": "0008",
+  "nombre_articulo": "iRobot Roomba 980",
+  "palabras_clave": ["aspiradora", "iRobot", "Roomba"],
+  "caracteristicas_venta": {
+    "marca": "iRobot",
+    "modelo": "Roomba 980",
+    "tipo": "robot",
+    "autonomia": "120 minutos",
+    "conectividad": "Wi-Fi",
+    "precio": 799.99
+  }
+},
+{
+  "id_articulo": "0009",
+  "nombre_articulo": "Adidas Stan Smith",
+  "palabras_clave": ["calzado", "zapatillas", "Adidas", "casual"],
+  "caracteristicas_venta": {
+    "marca": "Adidas",
+    "modelo": "Stan Smith",
+    "color": "Blanco/Verde",
+    "talla": ["US 10", "EU 44", "UK 9.5"],
+    "precio": 79.99
+  },
+	"en_venta":true
+},
+{
+  "id_articulo": "0010",
+  "nombre_articulo": "Dior Sauvage",
+  "palabras_clave": ["perfume", "Dior", "Sauvage"],
+  "caracteristicas_venta": {
+    "marca": "Dior",
+    "nombre": "Sauvage",
+    "volumen": "100ml",
+    "tipo": "Eau de Toilette",
+    "precio": 119.99
+  }
+}
+]

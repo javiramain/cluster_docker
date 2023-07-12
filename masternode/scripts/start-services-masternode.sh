@@ -47,7 +47,17 @@ cp -r /streamlit /home && cp -r /scripts /home
 
 #Arrancamos en segundo plano el servicio de mongoDB
 mongod --config /etc/mongod.conf --bind_ip_all &
+# Comprobamos si el replicaSet ha sido arrancado previamente. Si no, se inicia, se configura y se añaden unos datos
+# iniciales de muestra. Si el rs.status() devuelve el codigo 94, no ha sido inicializado.
+sleep 3
+echo "Comprobando el estado del replicaSet"
+init_status=$(mongo --eval "rs.status().code")
 
+if [ "${init_status: -2}" = "94" ]; then
+    echo "Mongo ReplicaSet is not initialized. Initializing....."
+    mongo < /home/scripts/start-replicaSet.js
+    echo "Mongo Replica Set is ready!"
+fi
 
 #Arranca en segundo plano el servicio de zookeeper
 zookeeper-server-start.sh ${KAFKA_HOME}/config/zookeeper.properties &

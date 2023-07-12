@@ -1,0 +1,1136 @@
+[
+  {
+    "id_articulo": "0011",
+    "nombre_articulo": "Samsung Galaxy S20",
+    "palabras_clave": ["telefono", "movil", "samsung", "galaxy"],
+    "caracteristicas_venta": {
+      "marca": "Samsung",
+      "modelo": "Galaxy S20",
+      "pantalla": "6.2 pulgadas",
+      "almacenamiento": "128GB",
+      "color": "Negro",
+      "precio": 899.99
+    }
+  },
+  {
+    "id_articulo": "0012",
+    "nombre_articulo": "LG OLED 4K TV",
+    "palabras_clave": ["television", "oled", "4K", "lg"],
+    "caracteristicas_venta": {
+      "marca": "LG",
+      "modelo": "CX",
+      "pulgadas": 65,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 1999.99
+    }
+  },
+  {
+    "id_articulo": "0013",
+    "nombre_articulo": "Dyson V11",
+    "palabras_clave": ["aspiradora", "dyson", "sin cable"],
+    "caracteristicas_venta": {
+      "marca": "Dyson",
+      "modelo": "V11",
+      "tipo": "sin cable",
+      "capacidad": "0.76 litros",
+      "bateria": "hasta 60 minutos",
+      "precio": 599.99
+    }
+  },
+  {
+    "id_articulo": "0014",
+    "nombre_articulo": "Nike Air Max 90",
+    "palabras_clave": ["calzado", "zapatillas", "nike", "deportivas"],
+    "caracteristicas_venta": {
+      "marca": "Nike",
+      "modelo": "Air Max 90",
+      "color": "Blanco",
+      "talla": ["US 9", "EU 42.5", "UK 8"],
+      "precio": 129.99
+    }
+  },
+  {
+    "id_articulo": "0015",
+    "nombre_articulo": "Chanel Coco Mademoiselle",
+    "palabras_clave": ["perfume", "chanel", "coco mademoiselle"],
+    "caracteristicas_venta": {
+      "marca": "Chanel",
+      "nombre": "Coco Mademoiselle",
+      "volumen": "100ml",
+      "tipo": "Eau de Parfum",
+      "precio": 149.99
+    }
+  },
+  {
+    "id_articulo": "0016",
+    "nombre_articulo": "Samsung Galaxy S21",
+    "palabras_clave": ["telefono", "movil", "samsung", "galaxy"],
+    "caracteristicas_venta": {
+      "marca": "Samsung",
+      "modelo": "Galaxy S21",
+      "pantalla": "6.2 pulgadas",
+      "almacenamiento": "256GB",
+      "color": "Gris",
+      "precio": 899.99
+    }
+  },
+  {
+    "id_articulo": "0017",
+    "nombre_articulo": "LG OLED 4K TV",
+    "palabras_clave": ["television", "oled", "4K", "lg"],
+    "caracteristicas_venta": {
+      "marca": "LG",
+      "modelo": "C1",
+      "pulgadas": 65,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 1699.99
+    }
+  },
+  {
+    "id_articulo": "0018",
+    "nombre_articulo": "iRobot Roomba 980",
+    "palabras_clave": ["aspiradora", "irobot", "roomba"],
+    "caracteristicas_venta": {
+      "marca": "iRobot",
+      "modelo": "Roomba 980",
+      "tipo": "robot",
+      "autonomia": "120 minutos",
+      "conectividad": "Wi-Fi",
+      "precio": 799.99
+    }
+  },
+  {
+    "id_articulo": "0019",
+    "nombre_articulo": "Adidas Stan Smith",
+    "palabras_clave": ["calzado", "zapatillas", "adidas", "casual"],
+    "caracteristicas_venta": {
+      "marca": "Adidas",
+      "modelo": "Stan Smith",
+      "color": "Blanco/Verde",
+      "talla": ["US 10", "EU 44", "UK 9.5"],
+      "precio": 79.99
+    }
+  },
+  {
+    "id_articulo": "0020",
+    "nombre_articulo": "Dior Sauvage",
+    "palabras_clave": ["perfume", "dior", "sauvage"],
+    "caracteristicas_venta": {
+      "marca": "Dior",
+      "nombre": "Sauvage",
+      "volumen": "100ml",
+      "tipo": "Eau de Toilette",
+      "precio": 119.99
+    }
+  },
+  {
+    "id_articulo": "0021",
+    "nombre_articulo": "iPhone 11",
+    "palabras_clave": ["telefono", "movil", "iphone", "apple"],
+    "caracteristicas_venta": {
+      "marca": "Apple",
+      "modelo": "iPhone 11",
+      "pantalla": "6.1 pulgadas",
+      "almacenamiento": "64GB",
+      "color": "Negro",
+      "precio": 699.99
+    }
+  },
+  {
+    "id_articulo": "0022",
+    "nombre_articulo": "Sony 4K LED TV",
+    "palabras_clave": ["television", "led", "4K", "sony"],
+    "caracteristicas_venta": {
+      "marca": "Sony",
+      "modelo": "X800H",
+      "pulgadas": 55,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 799.99
+    }
+  },
+  {
+    "id_articulo": "0023",
+    "nombre_articulo": "Bissell CrossWave",
+    "palabras_clave": ["aspiradora", "bissell", "multiusos"],
+    "caracteristicas_venta": {
+      "marca": "Bissell",
+      "modelo": "CrossWave",
+      "tipo": "multiusos",
+      "capacidad": "0.82 litros",
+      "bateria": "hasta 30 minutos",
+      "precio": 299.99
+    }
+  },
+  {
+    "id_articulo": "0024",
+    "nombre_articulo": "Converse Chuck Taylor All Star",
+    "palabras_clave": ["calzado", "zapatillas", "converse", "casual"],
+    "caracteristicas_venta": {
+      "marca": "Converse",
+      "modelo": "Chuck Taylor All Star",
+      "color": "Blanco",
+      "talla": ["US 10.5", "EU 44.5", "UK 10"],
+      "precio": 69.99
+    }
+  },
+  {
+    "id_articulo": "0025",
+    "nombre_articulo": "Versace Eros",
+    "palabras_clave": ["perfume", "versace", "eros"],
+    "caracteristicas_venta": {
+      "marca": "Versace",
+      "nombre": "Eros",
+      "volumen": "100ml",
+      "tipo": "Eau de Toilette",
+      "precio": 79.99
+    }
+  },
+  {
+    "id_articulo": "0026",
+    "nombre_articulo": "Google Pixel 4a",
+    "palabras_clave": ["telefono", "movil", "google", "pixel"],
+    "caracteristicas_venta": {
+      "marca": "Google",
+      "modelo": "Pixel 4a",
+      "pantalla": "5.81 pulgadas",
+      "almacenamiento": "128GB",
+      "color": "Negro",
+      "precio": 349.99
+    }
+  },
+  {
+    "id_articulo": "0027",
+    "nombre_articulo": "Sony 4K OLED TV",
+    "palabras_clave": ["television", "oled", "4K", "sony"],
+    "caracteristicas_venta": {
+      "marca": "Sony",
+      "modelo": "A8H",
+      "pulgadas": 55,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 1699.99
+    }
+  },
+  {
+    "id_articulo": "0028",
+    "nombre_articulo": "Neato Botvac D7",
+    "palabras_clave": ["aspiradora", "neato", "robot"],
+    "caracteristicas_venta": {
+      "marca": "Neato",
+      "modelo": "Botvac D7",
+      "tipo": "robot",
+      "autonomia": "120 minutos",
+      "conectividad": "Wi-Fi",
+      "precio": 699.99
+    }
+  },
+  {
+    "id_articulo": "0029",
+    "nombre_articulo": "New Balance 574",
+    "palabras_clave": ["calzado", "zapatillas", "new balance", "deportivas"],
+    "caracteristicas_venta": {
+      "marca": "New Balance",
+      "modelo": "574",
+      "color": "Gris",
+      "talla": ["US 9.5", "EU 43", "UK 9"],
+      "precio": 89.99
+    }
+  },
+  {
+    "id_articulo": "0030",
+    "nombre_articulo": "Yves Saint Laurent La Nuit de L'Homme",
+    "palabras_clave": ["perfume", "yves saint laurent", "la nuit de l'homme"],
+    "caracteristicas_venta": {
+      "marca": "Yves Saint Laurent",
+      "nombre": "La Nuit de L'Homme",
+      "volumen": "100ml",
+      "tipo": "Eau de Toilette",
+      "precio": 119.99
+    }
+  },
+  {
+    "id_articulo": "0031",
+    "nombre_articulo": "OnePlus 9 Pro",
+    "palabras_clave": ["telefono", "movil", "oneplus", "android"],
+    "caracteristicas_venta": {
+      "marca": "OnePlus",
+      "modelo": "9 Pro",
+      "pantalla": "6.7 pulgadas",
+      "almacenamiento": "256GB",
+      "color": "Negro",
+      "precio": 999.99
+    }
+  },
+  {
+    "id_articulo": "0032",
+    "nombre_articulo": "Samsung QLED 8K TV",
+    "palabras_clave": ["television", "qled", "8K", "samsung"],
+    "caracteristicas_venta": {
+      "marca": "Samsung",
+      "modelo": "Q900TS",
+      "pulgadas": 75,
+      "resolucion": "8K Ultra HD",
+      "smart_tv": true,
+      "precio": 5999.99
+    }
+  },
+  {
+    "id_articulo": "0033",
+    "nombre_articulo": "iRobot Roomba i7+",
+    "palabras_clave": ["aspiradora", "irobot", "roomba"],
+    "caracteristicas_venta": {
+      "marca": "iRobot",
+      "modelo": "Roomba i7+",
+      "tipo": "robot",
+      "autonomia": "75 minutos",
+      "conectividad": "Wi-Fi",
+      "precio": 999.99
+    }
+  },
+  {
+    "id_articulo": "0034",
+    "nombre_articulo": "Puma Suede Classic",
+    "palabras_clave": ["calzado", "zapatillas", "puma", "casual"],
+    "caracteristicas_venta": {
+      "marca": "Puma",
+      "modelo": "Suede Classic",
+      "color": "Azul",
+      "talla": ["US 10.5", "EU 44.5", "UK 10"],
+      "precio": 69.99
+    }
+  },
+  {
+    "id_articulo": "0035",
+    "nombre_articulo": "Dolce & Gabbana Light Blue",
+    "palabras_clave": ["perfume", "dolce & gabbana", "light blue"],
+    "caracteristicas_venta": {
+      "marca": "Dolce & Gabbana",
+      "nombre": "Light Blue",
+      "volumen": "100ml",
+      "tipo": "Eau de Toilette",
+      "precio": 69.99
+    }
+  },
+  {
+    "id_articulo": "0036",
+    "nombre_articulo": "Xiaomi Mi 11",
+    "palabras_clave": ["telefono", "movil", "xiaomi", "mi"],
+    "caracteristicas_venta": {
+      "marca": "Xiaomi",
+      "modelo": "Mi 11",
+      "pantalla": "6.81 pulgadas",
+      "almacenamiento": "128GB",
+      "color": "Negro",
+      "precio": 799.99
+    }
+  },
+  {
+    "id_articulo": "0037",
+    "nombre_articulo": "Sony 4K OLED TV",
+    "palabras_clave": ["television", "oled", "4K", "sony"],
+    "caracteristicas_venta": {
+      "marca": "Sony",
+      "modelo": "A9G",
+      "pulgadas": 65,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 2999.99
+    }
+  },
+  {
+    "id_articulo": "0038",
+    "nombre_articulo": "Shark IQ Robot",
+    "palabras_clave": ["aspiradora", "shark", "robot"],
+    "caracteristicas_venta": {
+      "marca": "Shark",
+      "modelo": "IQ Robot",
+      "tipo": "robot",
+      "autonomia": "90 minutos",
+      "conectividad": "Wi-Fi",
+      "precio": 499.99
+    }
+  },
+  {
+    "id_articulo": "0039",
+    "nombre_articulo": "Reebok Classic Leather",
+    "palabras_clave": ["calzado", "zapatillas", "reebok", "casual"],
+    "caracteristicas_venta": {
+      "marca": "Reebok",
+      "modelo": "Classic Leather",
+      "color": "Blanco",
+      "talla": ["US 9.5", "EU 43", "UK 9"],
+      "precio": 79.99
+    }
+  },
+  {
+    "id_articulo": "0040",
+    "nombre_articulo": "Gucci Guilty",
+    "palabras_clave": ["perfume", "gucci", "guilty"],
+    "caracteristicas_venta": {
+      "marca": "Gucci",
+      "nombre": "Guilty",
+      "volumen": "90ml",
+      "tipo": "Eau de Toilette",
+      "precio": 89.99
+    }
+  },
+   {
+    "id_articulo": "0041",
+    "nombre_articulo": "iPhone 12",
+    "palabras_clave": ["telefono", "movil", "iphone", "apple"],
+    "caracteristicas_venta": {
+      "marca": "Apple",
+      "modelo": "iPhone 12",
+      "pantalla": "6.1 pulgadas",
+      "almacenamiento": "64GB",
+      "color": "Negro",
+      "precio": 799.99
+    }
+  },
+  {
+    "id_articulo": "0042",
+    "nombre_articulo": "Samsung QLED 4K TV",
+    "palabras_clave": ["television", "qled", "4K", "samsung"],
+    "caracteristicas_venta": {
+      "marca": "Samsung",
+      "modelo": "Q80T",
+      "pulgadas": 55,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 1299.99
+    }
+  },
+  {
+    "id_articulo": "0043",
+    "nombre_articulo": "Dyson Cyclone V10",
+    "palabras_clave": ["aspiradora", "dyson", "sin cable"],
+    "caracteristicas_venta": {
+      "marca": "Dyson",
+      "modelo": "Cyclone V10",
+      "tipo": "sin cable",
+      "capacidad": "0.76 litros",
+      "bateria": "hasta 60 minutos",
+      "precio": 499.99
+    }
+  },
+  {
+    "id_articulo": "0044",
+    "nombre_articulo": "Vans Old Skool",
+    "palabras_clave": ["calzado", "zapatillas", "vans", "casual"],
+    "caracteristicas_venta": {
+      "marca": "Vans",
+      "modelo": "Old Skool",
+      "color": "Negro/Blanco",
+      "talla": ["US 9", "EU 42", "UK 8"],
+      "precio": 59.99
+    }
+  },
+  {
+    "id_articulo": "0045",
+    "nombre_articulo": "Dolce & Gabbana The One",
+    "palabras_clave": ["perfume", "dolce & gabbana", "the one"],
+    "caracteristicas_venta": {
+      "marca": "Dolce & Gabbana",
+      "nombre": "The One",
+      "volumen": "100ml",
+      "tipo": "Eau de Parfum",
+      "precio": 79.99
+    }
+  },
+  {
+    "id_articulo": "0046",
+    "nombre_articulo": "Xiaomi Redmi Note 10",
+    "palabras_clave": ["telefono", "movil", "xiaomi", "redmi"],
+    "caracteristicas_venta": {
+      "marca": "Xiaomi",
+      "modelo": "Redmi Note 10",
+      "pantalla": "6.43 pulgadas",
+      "almacenamiento": "128GB",
+      "color": "Azul",
+      "precio": 249.99
+    }
+  },
+  {
+    "id_articulo": "0047",
+    "nombre_articulo": "Sony 8K OLED TV",
+    "palabras_clave": ["television", "oled", "8K", "sony"],
+    "caracteristicas_venta": {
+      "marca": "Sony",
+      "modelo": "A90J",
+      "pulgadas": 65,
+      "resolucion": "8K Ultra HD",
+      "smart_tv": true,
+      "precio": 4999.99
+    }
+  },
+  {
+    "id_articulo": "0048",
+    "nombre_articulo": "Ecovacs Deebot N8 Pro",
+    "palabras_clave": ["aspiradora", "ecovacs", "robot"],
+    "caracteristicas_venta": {
+      "marca": "Ecovacs",
+      "modelo": "Deebot N8 Pro",
+      "tipo": "robot",
+      "autonomia": "110 minutos",
+      "conectividad": "Wi-Fi",
+      "precio": 599.99
+    }
+  },
+  {
+    "id_articulo": "0049",
+    "nombre_articulo": "Nike Air Force 1",
+    "palabras_clave": ["calzado", "zapatillas", "nike", "casual"],
+    "caracteristicas_venta": {
+      "marca": "Nike",
+      "modelo": "Air Force 1",
+      "color": "Blanco",
+      "talla": ["US 10", "EU 44", "UK 9"],
+      "precio": 89.99
+    }
+  },
+  {
+    "id_articulo": "0050",
+    "nombre_articulo": "Chloe Love Story",
+    "palabras_clave": ["perfume", "chloe", "love story"],
+    "caracteristicas_venta": {
+      "marca": "Chloe",
+      "nombre": "Love Story",
+      "volumen": "75ml",
+      "tipo": "Eau de Parfum",
+      "precio": 99.99
+    }
+  },
+  {
+    "id_articulo": "0051",
+    "nombre_articulo": "Samsung Galaxy S21 Ultra",
+    "palabras_clave": ["telefono", "movil", "samsung", "galaxy"],
+    "caracteristicas_venta": {
+      "marca": "Samsung",
+      "modelo": "Galaxy S21 Ultra",
+      "pantalla": "6.8 pulgadas",
+      "almacenamiento": "512GB",
+      "color": "Negro",
+      "precio": 1299.99
+    }
+  },
+  {
+    "id_articulo": "0052",
+    "nombre_articulo": "LG NanoCell 4K TV",
+    "palabras_clave": ["television", "nanocell", "4K", "lg"],
+    "caracteristicas_venta": {
+      "marca": "LG",
+      "modelo": "NANO90",
+      "pulgadas": 65,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 1499.99
+    }
+  },
+  {
+    "id_articulo": "0053",
+    "nombre_articulo": "Dyson V11 Absolute",
+    "palabras_clave": ["aspiradora", "dyson", "sin cable"],
+    "caracteristicas_venta": {
+      "marca": "Dyson",
+      "modelo": "V11 Absolute",
+      "tipo": "sin cable",
+      "capacidad": "0.76 litros",
+      "bateria": "hasta 60 minutos",
+      "precio": 699.99
+    }
+  },
+  {
+    "id_articulo": "0054",
+    "nombre_articulo": "Adidas Superstar",
+    "palabras_clave": ["calzado", "zapatillas", "adidas", "casual"],
+    "caracteristicas_venta": {
+      "marca": "Adidas",
+      "modelo": "Superstar",
+      "color": "Blanco/Negro",
+      "talla": ["US 9.5", "EU 43.5", "UK 9"],
+      "precio": 79.99
+    }
+  },
+  {
+    "id_articulo": "0055",
+    "nombre_articulo": "Dior J'adore",
+    "palabras_clave": ["perfume", "dior", "j'adore"],
+    "caracteristicas_venta": {
+      "marca": "Dior",
+      "nombre": "J'adore",
+      "volumen": "100ml",
+      "tipo": "Eau de Parfum",
+      "precio": 129.99
+    }
+  },
+  {
+    "id_articulo": "0056",
+    "nombre_articulo": "Xiaomi Redmi Note 9",
+    "palabras_clave": ["telefono", "movil", "xiaomi", "redmi"],
+    "caracteristicas_venta": {
+      "marca": "Xiaomi",
+      "modelo": "Redmi Note 9",
+      "pantalla": "6.53 pulgadas",
+      "almacenamiento": "128GB",
+      "color": "Verde",
+      "precio": 199.99
+    }
+  },
+  {
+    "id_articulo": "0057",
+    "nombre_articulo": "Sony 4K LED TV",
+    "palabras_clave": ["television", "led", "4K", "sony"],
+    "caracteristicas_venta": {
+      "marca": "Sony",
+      "modelo": "X950H",
+      "pulgadas": 65,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 1999.99
+    }
+  },
+  {
+    "id_articulo": "0058",
+    "nombre_articulo": "iRobot Roomba i3+",
+    "palabras_clave": ["aspiradora", "irobot", "roomba"],
+    "caracteristicas_venta": {
+      "marca": "iRobot",
+      "modelo": "Roomba i3+",
+      "tipo": "robot",
+      "autonomia": "75 minutos",
+      "conectividad": "Wi-Fi",
+      "precio": 599.99
+    }
+  },
+  {
+    "id_articulo": "0059",
+    "nombre_articulo": "Reebok Club C 85",
+    "palabras_clave": ["calzado", "zapatillas", "reebok", "casual"],
+    "caracteristicas_venta": {
+      "marca": "Reebok",
+      "modelo": "Club C 85",
+      "color": "Blanco",
+      "talla": ["US 9", "EU 42", "UK 8"],
+      "precio": 69.99
+    }
+  },
+  {
+    "id_articulo": "0060",
+    "nombre_articulo": "Guerlain Mon Guerlain",
+    "palabras_clave": ["perfume", "guerlain", "mon guerlain"],
+    "caracteristicas_venta": {
+      "marca": "Guerlain",
+      "nombre": "Mon Guerlain",
+      "volumen": "100ml",
+      "tipo": "Eau de Parfum",
+      "precio": 89.99
+    }
+  },
+   {
+    "id_articulo": "0061",
+    "nombre_articulo": "iPhone 12 Pro",
+    "palabras_clave": ["telefono", "movil", "iphone", "apple"],
+    "caracteristicas_venta": {
+      "marca": "Apple",
+      "modelo": "iPhone 12 Pro",
+      "pantalla": "6.1 pulgadas",
+      "almacenamiento": "128GB",
+      "color": "Plata",
+      "precio": 999.99
+    }
+  },
+  {
+    "id_articulo": "0062",
+    "nombre_articulo": "Samsung The Frame 4K TV",
+    "palabras_clave": ["television", "frame", "4K", "samsung"],
+    "caracteristicas_venta": {
+      "marca": "Samsung",
+      "modelo": "The Frame",
+      "pulgadas": 55,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 1499.99
+    }
+  },
+  {
+    "id_articulo": "0063",
+    "nombre_articulo": "Dyson V8 Animal",
+    "palabras_clave": ["aspiradora", "dyson", "sin cable"],
+    "caracteristicas_venta": {
+      "marca": "Dyson",
+      "modelo": "V8 Animal",
+      "tipo": "sin cable",
+      "capacidad": "0.54 litros",
+      "bateria": "hasta 40 minutos",
+      "precio": 399.99
+    }
+  },
+  {
+    "id_articulo": "0064",
+    "nombre_articulo": "Nike Air Jordan 1",
+    "palabras_clave": ["calzado", "zapatillas", "nike", "deportivas"],
+    "caracteristicas_venta": {
+      "marca": "Nike",
+      "modelo": "Air Jordan 1",
+      "color": "Negro/Rojo",
+      "talla": ["US 10", "EU 44", "UK 9"],
+      "precio": 159.99
+    }
+  },
+  {
+    "id_articulo": "0065",
+    "nombre_articulo": "Yves Saint Laurent Black Opium",
+    "palabras_clave": ["perfume", "yves saint laurent", "black opium"],
+    "caracteristicas_venta": {
+      "marca": "Yves Saint Laurent",
+      "nombre": "Black Opium",
+      "volumen": "90ml",
+      "tipo": "Eau de Parfum",
+      "precio": 109.99
+    }
+  },
+  {
+    "id_articulo": "0066",
+    "nombre_articulo": "Google Pixel 5",
+    "palabras_clave": ["telefono", "movil", "google", "pixel"],
+    "caracteristicas_venta": {
+      "marca": "Google",
+      "modelo": "Pixel 5",
+      "pantalla": "6.0 pulgadas",
+      "almacenamiento": "128GB",
+      "color": "Verde",
+      "precio": 699.99
+    }
+  },
+  {
+    "id_articulo": "0067",
+    "nombre_articulo": "Sony 4K LED TV",
+    "palabras_clave": ["television", "led", "4K", "sony"],
+    "caracteristicas_venta": {
+      "marca": "Sony",
+      "modelo": "X900H",
+      "pulgadas": 65,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 1699.99
+    }
+  },
+  {
+    "id_articulo": "0068",
+    "nombre_articulo": "Neato Botvac D6",
+    "palabras_clave": ["aspiradora", "neato", "robot"],
+    "caracteristicas_venta": {
+      "marca": "Neato",
+      "modelo": "Botvac D6",
+      "tipo": "robot",
+      "autonomia": "120 minutos",
+      "conectividad": "Wi-Fi",
+      "precio": 699.99
+    }
+  },
+  {
+    "id_articulo": "0069",
+    "nombre_articulo": "New Balance 990",
+    "palabras_clave": ["calzado", "zapatillas", "new balance", "casual"],
+    "caracteristicas_venta": {
+      "marca": "New Balance",
+      "modelo": "990",
+      "color": "Gris",
+      "talla": ["US 10.5", "EU 44.5", "UK 10"],
+      "precio": 174.99
+    }
+  },
+  {
+    "id_articulo": "0070",
+    "nombre_articulo": "Bvlgari Omnia Crystalline",
+    "palabras_clave": ["perfume", "bvlgari", "omnia crystalline"],
+    "caracteristicas_venta": {
+      "marca": "Bvlgari",
+      "nombre": "Omnia Crystalline",
+      "volumen": "65ml",
+      "tipo": "Eau de Toilette",
+      "precio": 59.99
+    }
+  },
+  {
+    "id_articulo": "0071",
+    "nombre_articulo": "Samsung Galaxy S20 FE",
+    "palabras_clave": ["telefono", "movil", "samsung", "galaxy"],
+    "caracteristicas_venta": {
+      "marca": "Samsung",
+      "modelo": "Galaxy S20 FE",
+      "pantalla": "6.5 pulgadas",
+      "almacenamiento": "128GB",
+      "color": "Azul",
+      "precio": 699.99
+    }
+  },
+  {
+    "id_articulo": "0072",
+    "nombre_articulo": "LG OLED 4K TV",
+    "palabras_clave": ["television", "oled", "4K", "lg"],
+    "caracteristicas_venta": {
+      "marca": "LG",
+      "modelo": "CX",
+      "pulgadas": 55,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 1799.99
+    }
+  },
+  {
+    "id_articulo": "0073",
+    "nombre_articulo": "Shark Navigator Lift-Away",
+    "palabras_clave": ["aspiradora", "shark", "vertical"],
+    "caracteristicas_venta": {
+      "marca": "Shark",
+      "modelo": "Navigator Lift-Away",
+      "tipo": "vertical",
+      "capacidad": "2.2 litros",
+      "bateria": "No aplica",
+      "precio": 199.99
+    }
+  },
+  {
+    "id_articulo": "0074",
+    "nombre_articulo": "Puma RS-X³",
+    "palabras_clave": ["calzado", "zapatillas", "puma", "deportivas"],
+    "caracteristicas_venta": {
+      "marca": "Puma",
+      "modelo": "RS-X³",
+      "color": "Negro/Rojo",
+      "talla": ["US 9.5", "EU 43", "UK 9"],
+      "precio": 99.99
+    }
+  },
+  {
+    "id_articulo": "0075",
+    "nombre_articulo": "Chanel Coco Mademoiselle",
+    "palabras_clave": ["perfume", "chanel", "coco mademoiselle"],
+    "caracteristicas_venta": {
+      "marca": "Chanel",
+      "nombre": "Coco Mademoiselle",
+      "volumen": "100ml",
+      "tipo": "Eau de Parfum",
+      "precio": 129.99
+    }
+  },
+  {
+    "id_articulo": "0076",
+    "nombre_articulo": "Xiaomi Redmi Note 8",
+    "palabras_clave": ["telefono", "movil", "xiaomi", "redmi"],
+    "caracteristicas_venta": {
+      "marca": "Xiaomi",
+      "modelo": "Redmi Note 8",
+      "pantalla": "6.3 pulgadas",
+      "almacenamiento": "64GB",
+      "color": "Negro",
+      "precio": 169.99
+    }
+  },
+  {
+    "id_articulo": "0077",
+    "nombre_articulo": "Sony 4K LED TV",
+    "palabras_clave": ["television", "led", "4K", "sony"],
+    "caracteristicas_venta": {
+      "marca": "Sony",
+      "modelo": "X950G",
+      "pulgadas": 75,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 2999.99
+    }
+  },
+  {
+    "id_articulo": "0078",
+    "nombre_articulo": "iRobot Roomba 675",
+    "palabras_clave": ["aspiradora", "irobot", "roomba"],
+    "caracteristicas_venta": {
+      "marca": "iRobot",
+      "modelo": "Roomba 675",
+      "tipo": "robot",
+      "autonomia": "90 minutos",
+      "conectividad": "Wi-Fi",
+      "precio": 299.99
+    }
+  },
+  {
+    "id_articulo": "0079",
+    "nombre_articulo": "Vans Authentic",
+    "palabras_clave": ["calzado", "zapatillas", "vans", "casual"],
+    "caracteristicas_venta": {
+      "marca": "Vans",
+      "modelo": "Authentic",
+      "color": "Blanco",
+      "talla": ["US 9", "EU 42", "UK 8"],
+      "precio": 49.99
+    }
+  },
+  {
+    "id_articulo": "0080",
+    "nombre_articulo": "Burberry Brit",
+    "palabras_clave": ["perfume", "burberry", "brit"],
+    "caracteristicas_venta": {
+      "marca": "Burberry",
+      "nombre": "Brit",
+      "volumen": "100ml",
+      "tipo": "Eau de Toilette",
+      "precio": 79.99
+    }
+  },
+  {
+    "id_articulo": "0081",
+    "nombre_articulo": "iPhone SE",
+    "palabras_clave": ["telefono", "movil", "iphone", "apple"],
+    "caracteristicas_venta": {
+      "marca": "Apple",
+      "modelo": "iPhone SE",
+      "pantalla": "4.7 pulgadas",
+      "almacenamiento": "64GB",
+      "color": "Blanco",
+      "precio": 399.99
+    }
+  },
+  {
+    "id_articulo": "0082",
+    "nombre_articulo": "Sony 8K LED TV",
+    "palabras_clave": ["television", "led", "8K", "sony"],
+    "caracteristicas_venta": {
+      "marca": "Sony",
+      "modelo": "Z8H",
+      "pulgadas": 85,
+      "resolucion": "8K Ultra HD",
+      "smart_tv": true,
+      "precio": 7999.99
+    }
+  },
+  {
+    "id_articulo": "0083",
+    "nombre_articulo": "Bissell CleanView",
+    "palabras_clave": ["aspiradora", "bissell", "vertical"],
+    "caracteristicas_venta": {
+      "marca": "Bissell",
+      "modelo": "CleanView",
+      "tipo": "vertical",
+      "capacidad": "2 litros",
+     "bateria": "No aplica",
+      "precio": 119.99
+    }
+  },
+  {
+    "id_articulo": "0084",
+    "nombre_articulo": "Converse Chuck Taylor All Star",
+    "palabras_clave": ["calzado", "zapatillas", "converse", "casual"],
+    "caracteristicas_venta": {
+      "marca": "Converse",
+      "modelo": "Chuck Taylor All Star",
+      "color": "Negro",
+      "talla": ["US 9", "EU 42", "UK 8"],
+      "precio": 59.99
+    }
+  },
+  {
+    "id_articulo": "0085",
+    "nombre_articulo": "Gucci Bloom",
+    "palabras_clave": ["perfume", "gucci", "bloom"],
+    "caracteristicas_venta": {
+      "marca": "Gucci",
+      "nombre": "Bloom",
+      "volumen": "100ml",
+      "tipo": "Eau de Parfum",
+      "precio": 99.99
+    }
+  },
+  {
+    "id_articulo": "0086",
+    "nombre_articulo": "Xiaomi Redmi 9",
+    "palabras_clave": ["telefono", "movil", "xiaomi", "redmi"],
+    "caracteristicas_venta": {
+      "marca": "Xiaomi",
+      "modelo": "Redmi 9",
+      "pantalla": "6.53 pulgadas",
+      "almacenamiento": "64GB",
+      "color": "Verde",
+      "precio": 149.99
+    }
+  },
+  {
+    "id_articulo": "0087",
+    "nombre_articulo": "Samsung 4K LED TV",
+    "palabras_clave": ["television", "led", "4K", "samsung"],
+    "caracteristicas_venta": {
+      "marca": "Samsung",
+      "modelo": "Q60T",
+      "pulgadas": 55,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 999.99
+    }
+  },
+  {
+    "id_articulo": "0088",
+    "nombre_articulo": "Neato Botvac D7",
+    "palabras_clave": ["aspiradora", "neato", "robot"],
+    "caracteristicas_venta": {
+      "marca": "Neato",
+      "modelo": "Botvac D7",
+      "tipo": "robot",
+      "autonomia": "120 minutos",
+      "conectividad": "Wi-Fi",
+      "precio": 799.99
+    }
+  },
+  {
+    "id_articulo": "0089",
+    "nombre_articulo": "Adidas Stan Smith",
+    "palabras_clave": ["calzado", "zapatillas", "adidas", "casual"],
+    "caracteristicas_venta": {
+      "marca": "Adidas",
+      "modelo": "Stan Smith",
+      "color": "Blanco/Verde",
+      "talla": ["US 9.5", "EU 43.5", "UK 9"],
+      "precio": 79.99
+    }
+  },
+  {
+    "id_articulo": "0090",
+    "nombre_articulo": "Versace Eros",
+    "palabras_clave": ["perfume", "versace", "eros"],
+    "caracteristicas_venta": {
+      "marca": "Versace",
+      "nombre": "Eros",
+      "volumen": "100ml",
+      "tipo": "Eau de Toilette",
+      "precio": 79.99
+    }
+  },
+  {
+    "id_articulo": "0091",
+    "nombre_articulo": "Google Pixel 4a",
+    "palabras_clave": ["telefono", "movil", "google", "pixel"],
+    "caracteristicas_venta": {
+      "marca": "Google",
+      "modelo": "Pixel 4a",
+      "pantalla": "5.81 pulgadas",
+      "almacenamiento": "128GB",
+      "color": "Negro",
+      "precio": 349.99
+    }
+  },
+  {
+    "id_articulo": "0092",
+    "nombre_articulo": "LG NanoCell 8K TV",
+    "palabras_clave": ["television", "nanocell", "8K", "lg"],
+    "caracteristicas_venta": {
+      "marca": "LG",
+      "modelo": "NANO99",
+      "pulgadas": 75,
+      "resolucion": "8K Ultra HD",
+      "smart_tv": true,
+      "precio": 5999.99
+    }
+  },
+  {
+    "id_articulo": "0093",
+    "nombre_articulo": "Bissell CrossWave",
+    "palabras_clave": ["aspiradora", "bissell", "aspira y friega"],
+    "caracteristicas_venta": {
+      "marca": "Bissell",
+      "modelo": "CrossWave",
+      "tipo": "aspira y friega",
+      "capacidad": "0.82 litros",
+      "bateria": "No aplica",
+      "precio": 299.99
+    }
+  },
+  {
+    "id_articulo": "0094",
+    "nombre_articulo": "Reebok Nano X",
+    "palabras_clave": ["calzado", "zapatillas", "reebok", "deportivas"],
+    "caracteristicas_venta": {
+      "marca": "Reebok",
+      "modelo": "Nano X",
+      "color": "Negro",
+      "talla": ["US 10.5", "EU 44.5", "UK 10"],
+      "precio": 129.99
+    }
+  },
+  {
+    "id_articulo": "0095",
+    "nombre_articulo": "Yves Saint Laurent Libre",
+    "palabras_clave": ["perfume", "yves saint laurent", "libre"],
+    "caracteristicas_venta": {
+      "marca": "Yves Saint Laurent",
+      "nombre": "Libre",
+      "volumen": "90ml",
+      "tipo": "Eau de Parfum",
+      "precio": 109.99
+    }
+  },
+  {
+    "id_articulo": "0096",
+    "nombre_articulo": "OnePlus Nord",
+    "palabras_clave": ["telefono", "movil", "oneplus", "nord"],
+    "caracteristicas_venta": {
+      "marca": "OnePlus",
+      "modelo": "Nord",
+      "pantalla": "6.44 pulgadas",
+      "almacenamiento": "128GB",
+      "color": "Azul",
+      "precio": 399.99
+    }
+  },
+  {
+    "id_articulo": "0097",
+    "nombre_articulo": "Sony 4K OLED TV",
+    "palabras_clave": ["television", "oled", "4K", "sony"],
+    "caracteristicas_venta": {
+      "marca": "Sony",
+      "modelo": "A8H",
+      "pulgadas": 55,
+      "resolucion": "4K Ultra HD",
+      "smart_tv": true,
+      "precio": 1999.99
+    }
+  },
+  {
+    "id_articulo": "0098",
+    "nombre_articulo": "iRobot Roomba i7+",
+    "palabras_clave": ["aspiradora", "irobot", "roomba"],
+    "caracteristicas_venta": {
+      "marca": "iRobot",
+      "modelo": "Roomba i7+",
+      "tipo": "robot",
+      "autonomia": "75 minutos",
+      "conectividad": "Wi-Fi",
+      "precio": 799.99
+    }
+  },
+  {
+    "id_articulo": "0099",
+    "nombre_articulo": "New Balance 997H",
+    "palabras_clave": ["calzado", "zapatillas", "new balance", "casual"],
+    "caracteristicas_venta": {
+      "marca": "New Balance",
+      "modelo": "997H",
+      "color": "Gris",
+      "talla": ["US 10", "EU 44", "UK 9"],
+      "precio": 99.99
+    }
+  },
+  {
+    "id_articulo": "0100",
+    "nombre_articulo": "Dolce & Gabbana Light Blue",
+    "palabras_clave": ["perfume", "dolce & gabbana", "light blue"],
+    "caracteristicas_venta": {
+      "marca": "Dolce & Gabbana",
+      "nombre": "Light Blue",
+      "volumen": "100ml",
+      "tipo": "Eau de Toilette",
+      "precio": 79.99
+    }
+  }
+]
